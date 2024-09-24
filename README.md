@@ -34,7 +34,7 @@ punc-by-llm/
 
 ## Prerequisites
 
-- Python 3.9+
+- Python >= 3.9
 - Deep Seek V2 API key
 
 ## Installation
