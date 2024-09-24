@@ -46,7 +46,7 @@ punc-by-llm/
    pip install openai
    ```
 
-3. Add your Deep Seek V2 API key to `api_key.txt`:
+3. Add your Deep Seek V2 API key to `api_key.txt` (you can get the API key from https://www.deepseek.com)
    ```plaintext
    sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
    ```

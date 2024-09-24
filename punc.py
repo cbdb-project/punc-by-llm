@@ -1,3 +1,5 @@
+# pip install openai
+
 import re
 import os
 from openai import OpenAI
@@ -11,6 +13,8 @@ def deepseek(text):
     response = client.chat.completions.create(
         model="deepseek-chat",
         messages=[{"role": "user", "content": text}],
+        temperature = 0.1,
+        top_p = 0.1,
     )
     return response.choices[0].message.content
 
@@ -39,7 +43,7 @@ with open("input.txt", "r", encoding="utf-8-sig") as file:
 count = 0
 for row in input_list:
     count += 1
-    if count % batch_size == 0:
+    if count % BATCH_SIZE == 0:
         print(f"{count}/{len(input_list)} ({round(count / len(input_list) * 100, 2)}%)")
 
     # Don't punctuate if the length is less than or equal to 4
@@ -75,7 +79,7 @@ for row in input_list:
         output_list.append(punctuated_row.replace("\n", "\\n"))
 
     # Write output batch by batch
-    if count % batch_size == 0:
+    if count % BATCH_SIZE == 0:
         with open("output.txt", "a", encoding="utf-8-sig") as file:
             for row in output_list:
                 file.write(row + "\n")

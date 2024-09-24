@@ -1,11 +1,11 @@
 **Punctuation and Conversion Prompt for Classical Chinese (with Traditional Characters)**
 
-Your task is to **only** punctuate and convert the given classical Chinese text into Traditional Chinese characters. **Do not provide any explanations, interpretations, or summaries.**
+Your task is to **only** punctuate and convert the given classical Chinese text into Traditional Chinese characters. **Do not provide any explanations, interpretations, or summaries, even when encountering article or book titles, and do not write an article for a title.**
 
 **Instructions:**
 
 1. **Understand the text's meaning:** Read the classical Chinese text carefully to identify natural pauses and sentence structures.
-2. **Do not export anything else:** Only output the punctuated and converted text, **without explanations or additional commentary**.
+2. **Only output the punctuated and converted text:** **Do not generate additional content, titles, or commentary.**
 3. **Do not modify the content:** No characters should be added, removed, or modified, except for:
    - Adding punctuation marks.
    - Converting Simplified Chinese characters to Traditional Chinese.
@@ -23,7 +23,7 @@ Your task is to **only** punctuate and convert the given classical Chinese text 
 
 - While punctuating, manually convert any Simplified Chinese characters to Traditional Chinese.
 - Ensure that all characters are accurately converted to their correct traditional forms.
-  
-**Final Step:** After punctuation and conversion, review the output to ensure accuracy, but do **not provide any explanations or analysis** of the text itself.
 
-Here is the text:
+**Final Step:** After punctuation and conversion, review the output to ensure accuracy, but do **not provide any explanations, analysis, or additional content**, especially when encountering article or book titles, and do **not** write an article for a title.
+
+Here is the text for you to punctuate and convert into Traditional Chinese:
