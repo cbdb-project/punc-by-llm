@@ -10,13 +10,19 @@ with open("api_key.txt", "r") as file:
 client = OpenAI(api_key=api_key_str, base_url="https://api.deepseek.com/")
 
 def deepseek(text):
-    response = client.chat.completions.create(
-        model="deepseek-chat",
-        messages=[{"role": "user", "content": text}],
-        temperature = 0.1,
-        top_p = 0.1,
-    )
-    return response.choices[0].message.content
+    output = ""
+    try:
+        response = client.chat.completions.create(
+            model="deepseek-chat",
+            messages=[{"role": "user", "content": text}],
+            temperature = 0.1,
+            top_p = 0.1,
+        )
+        output = response.choices[0].message.content
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        output = "Error"
+    return output
 
 with open("prompt.txt", "r", encoding="utf-8-sig") as file:
     prompt = file.read()
